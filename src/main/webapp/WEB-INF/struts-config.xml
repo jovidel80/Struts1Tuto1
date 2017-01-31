@@ -6,15 +6,33 @@
 <struts-config>
     <form-beans>
         <form-bean name="helloWorldForm"
-                   type="com.joseoliveros.form.HelloWorldForm"/>
+                   type="com.joseoliveros.helloworld.HelloWorldForm"/>
+        <form-bean name="userForm" 
+                   type="com.joseoliveros.textboxexample.UserForm"/>
     </form-beans>
 
     <action-mappings>
         <action path="/helloWorld"
-                type="com.joseoliveros.action.HelloWorldAction"
+                type="com.joseoliveros.helloworld.HelloWorldAction"
                 name="helloWorldForm">
-            <forward name="success" path="/HelloWorld.jsp"/>
+            <forward name="success" 
+                     path="/HelloWorld.jsp"/>
+        </action>
 
+        <action path="/loginPage"
+                type="org.apache.struts.actions.ForwardAction"
+                parameter="/pages/login.jsp"/>
+        
+        <action path="/login"
+                type="com.joseoliveros.textboxexample.UserAction"
+                name="userForm"
+                validate="true"
+                input="pages/login.jsp">
+            
+            <forward name="success" 
+                     path="pages/welcome.jsp"/>
         </action>
     </action-mappings>
+
+    <message-resources parameter="Common"/>
 </struts-config>

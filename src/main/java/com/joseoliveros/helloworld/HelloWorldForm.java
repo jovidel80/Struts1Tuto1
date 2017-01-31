@@ -1,4 +1,4 @@
-package com.joseoliveros.form;
+package com.joseoliveros.helloworld;
 
 import org.apache.struts.action.ActionForm;
 

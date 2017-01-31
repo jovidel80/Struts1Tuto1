@@ -1,6 +1,5 @@
-package com.joseoliveros.action;
+package com.joseoliveros.helloworld;
 
-import com.joseoliveros.form.HelloWorldForm;
 import org.apache.struts.action.Action;
 import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
