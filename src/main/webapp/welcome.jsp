@@ -12,6 +12,6 @@
     <title>welcome</title>
 </head>
 <body>
-Welcome <bean:write name="userForm" property="userName"/>
+    Welcome <bean:write name="userForm" property="username"/>
 </body>
 </html>

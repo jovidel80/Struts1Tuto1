@@ -7,17 +7,18 @@
 <h1>Struts html:text example</h1>
 
 <html:form action="/Login">
-    <%--<div style="color:red">--%>
-        <%--<html:errors/>--%>
-    <%--</div>--%>
 
-    <html:messages id="error" property="elerror">
+    <div style="color:red">
+        <html:errors/>
+    </div><!--
+
+    <html:messages id="err_name" property="common.name.err">
         <div style="color:red">
-        <bean:write name="error" />
+        <bean:write name="err_name" />
         </div>
     </html:messages>
 
-    <div style="padding:16px">
+    --><div style="padding:16px">
     <div style="float:left;padding-right:8px;">
         <bean:message key="label.common.name" /> :
     </div>

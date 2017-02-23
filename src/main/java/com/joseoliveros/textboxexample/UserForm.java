@@ -5,6 +5,7 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionMapping;
 import org.apache.struts.action.ActionMessage;
 
+import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
 
 public class UserForm extends ActionForm {
@@ -22,15 +23,15 @@ public class UserForm extends ActionForm {
     @Override
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errors = new ActionErrors();
-
-        if (getUserName() == null || getUserName().equals("")) {
-            errors.add("common.name.err", new ActionMessage("error.common.name.required"));
+        System.out.println("dentro del validate");
+        if (getUserName() == null || (getUserName().equals(""))) {
+            errors.add("elerror", new ActionMessage("error.common.name.required"));
         }
         return errors;
     }
 
     @Override
-    public void reset(ActionMapping mapping, HttpServletRequest request) {
+    public void reset(ActionMapping mapping, ServletRequest request) {
         userName = "";
     }
 }

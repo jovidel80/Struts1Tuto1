@@ -1,17 +1,19 @@
-<%@ taglib prefix="bean" uri="http://struts.apache.org/tags-bean" %>
 <%--
   Created by IntelliJ IDEA.
   User: joliveros
-  Date: 20/02/2017
-  Time: 09:17 AM
+  Date: 31/01/2017
+  Time: 09:09 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>welcome</title>
+    <title>Title</title>
 </head>
 <body>
-Welcome <bean:write name="userForm" property="userName"/>
+<form action="">
+    <input type="text" name="test">
+    <input type="submit" value="enviar">
+</form>
 </body>
 </html>

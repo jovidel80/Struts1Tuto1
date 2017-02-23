@@ -4,7 +4,6 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-  
   <servlet>
     <servlet-name>action</servlet-name>
     <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
@@ -14,8 +13,22 @@
     </init-param>
     <load-on-startup>1</load-on-startup>
   </servlet>
+    <servlet>
+        <servlet-name>OngetParameterMap</servlet-name>
+        <servlet-class>com.joseoliveros.parametermap.OngetParameterMap</servlet-class>
+    </servlet>
   <servlet-mapping>
+    <servlet-name>OngetParameterMap</servlet-name>
+    <url-pattern>/  </url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
     <servlet-name>action</servlet-name>
     <url-pattern>*.do</url-pattern>
   </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>/index.html</welcome-file>
+  </welcome-file-list>
+
+
 </web-app>
